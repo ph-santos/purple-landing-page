@@ -32,6 +32,7 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
 }
 
 a {
@@ -58,9 +59,33 @@ nav ul {
 
 nav a {
     display: block;
-    padding: 20px;
+    padding: 5px 15px;
+    margin-right: 20px;
     color: var(--menu-color);
 
+}
+
+nav a:hover {
+    color: #840ec9; 
+    transition: 0.3s;
+}
+
+nav a:active {
+    opacity: 0.4;
+}
+
+nav a:nth-child(1) {
+    margin-left: 10px;
+}
+
+nav a:nth-child(5) {
+    border: 2px solid #840ec9;
+    border-radius: 25px;
+}
+
+nav a:nth-child(5):hover {
+    background-color: #840ec9;
+    color: #ffffff;
 }
 
 
@@ -88,21 +113,102 @@ main {
     line-height: 18px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    width: 369px;
+}
+
+input {
+    margin-top: 20px;
+    padding: 20px;  
+    border-radius: 35px;
+    border: none;
+    font-size: 15px;
+    outline: none;
+}
+
+button {
+    width: 50%;
+    max-width: 174px;
+    height: 50px;
+    margin-top: 20px;
+    background-color: #840ec9;
+    color: #ffffff;
+    border: none;
+    border-radius: 35px;    
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+button:active {
+    opacity: 0.4;
+}
+
 img {
     max-width: 100%;
 }
 
 
 
-@media (max-width: 620px) {
-    
-    img {
-        width: 100%;
-        max-width: 450px;
+@media (max-width: 837px) {
+
+    header .title {
+        margin: 0 auto;
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    nav {
+        text-align: center;
+        margin-inline: auto;
+        margin-top: 40px;
     }
 
     main {
         display: block;
+
     }
 
+    /* .container-image {
+        margin-top: 40px;
+        display: flex;
+
+    } */
+
+    /* img {
+        width: 100%;
+        max-width: 550px;
+    } */
+
+    img {
+        display: none;
+    }
+
+    .conteudo h1, p {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        max-width: 629px;
+        margin: 0 auto;
+    }
+
+    button {
+        width: 100%;
+        max-width: 631px;
+    }
+
+    .image {
+        margin: 0 auto;
+    }
 }
